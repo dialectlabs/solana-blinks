@@ -2,8 +2,8 @@ import { ActionGetResponse, ActionPostRequest, ActionPostResponse, ACTIONS_CORS_
 import { createAssociatedTokenAccountInstruction, createTransferCheckedInstruction, getAssociatedTokenAddress, getMint } from "@solana/spl-token";
 import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, TransactionMessage, Connection, VersionedTransaction, } from "@solana/web3.js";
 
-// CAIP-2 Solana Devnet
-const blockchain = BLOCKCHAIN_IDS.devnet;
+// CAIP-2 Solana Mainnet
+const blockchain = BLOCKCHAIN_IDS.mainnet;
 
 // Create a connection to Solana
 const connection = new Connection(process.env.RPC_URL ?? 'https://api.mainnet-beta.solana.com');
