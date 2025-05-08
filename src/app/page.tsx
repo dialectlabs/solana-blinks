@@ -29,7 +29,7 @@ const steps = [
 ];
 
 export default function Home() {
-  const blinkApiUrl = "http://localhost:3000/api/actions/donate-sol";
+  const blinkApiUrl = "http://solana.dial.to/api/actions/transfer";
 
   // Adapter, used to connect to the wallet
   const { adapter } = useBlinkSolanaWalletAdapter(
