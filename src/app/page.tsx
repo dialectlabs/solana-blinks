@@ -33,7 +33,7 @@ export default function Home() {
 
   // Adapter, used to connect to the wallet
   const { adapter } = useBlinkSolanaWalletAdapter(
-    "https://api.devnet.solana.com"
+    process.env.NEXT_PUBLIC_RPC_URL ?? 'https://api.mainnet-beta.solana.com'
   );
 
   // Blink we want to execute
