@@ -195,7 +195,7 @@ export const POST = async (req: Request) => {
             : await createSplTokenTransferTransaction(payer, recipient, token, amountNumber);
 
         // Create a payload
-        const payload = {
+        const payload: ActionPostResponse = {
             type: 'transaction',
             transaction: Buffer.from(transaction.serialize()).toString('base64'),
         };

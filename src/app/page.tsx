@@ -29,7 +29,7 @@ const steps = [
 ];
 
 export default function Home() {
-  const blinkApiUrl = "http://solana.dial.to/api/actions/transfer";
+  const blinkApiUrl = typeof window !== 'undefined' ? `${window.location.origin}/api/actions/transfer` : null;
 
   // Adapter, used to connect to the wallet
   const { adapter } = useBlinkSolanaWalletAdapter(
@@ -37,7 +37,7 @@ export default function Home() {
   );
 
   // Blink we want to execute
-  const { blink, isLoading } = useBlink({ url: blinkApiUrl });
+  const { blink, isLoading } = useBlink({ url: blinkApiUrl ?? '' });
 
   return (
     <main className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] min-h-[calc(100vh-64px)]">
